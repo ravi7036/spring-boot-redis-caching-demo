@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+
+cache:
+  config:
+    entryTtl: 60
+    countryNames:
+      entryTtl: 30
